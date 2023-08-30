@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/insert.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Index</title>
+  </head>
+  <body>
+
+    {{>navheader}}
+
+    <div class="insertdevice-center">   
+
+        <h1>Add Your Own Device</h1>
+        <p>Welcome to our personalized device collection page! Here, you can create your own collection of devices and learn more about their unique characteristics and care requirements. You can add your own devices to the collection, so you can keep track of your own collection and share your knowledge with others. Whether you're a tech enthusiast or just starting out, this page is the perfect resource for discovering and maintaining all types of devices.</p>
+        
+        <form action="/auth/insertdevice" method="POST" class="insertdeviceform">
+            <label for="device_category">Device Category:</label>
+            <select name="device_category">
+                <option value="Temperature">Temperature</option>
+                <option value="Moisture">Moisture</option>
+                <option value="Light">Light</option>
+                <option value="Humidity">Humidity</option>
+            </select>
+
+            <label for="device_name">Device Name:</label>
+            <input type="text" name="device_name">
+
+            <button class="button-3" type="submit">Submit</button>
+        </form>
+    </div>   
+
+  </body>
+
+  {{> footer}}
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Index</title>
+  </head>
+  <body>
+
+    {{>navheader}}
+
+    <div class="plant-type-center">   
+
+        <h1>Plant Search Tool</h1>
+        <p>Welcome to our plant search tool! Our intuitive search filters and extensive plant database make it easy for you to find the perfect plants for your garden based on your specific needs and preferences. Browse through a variety of plant options and find the ones that best suit your garden and style.</p>
+
+        <div class="table-container-planttype">
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Plant Names.." title="Type in a name">
+
+        <table class="data_tables" id="myTable">
+            <thead>
+            <tr>
+                <th>Type</th>
+                <th>Family</th>
+                <th>Name</th>
+                <th>Uses</th>
+                <th>Information</th>
+                <th>Like</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each data}}
+                <tr>
+                    <td>{{this.plant_type}}</td>
+                    <td>{{this.plant_family}}</td>
+                    <td>{{this.plant_name}}</td>
+                    <td>{{this.uses}}</td>
+                    <td>
+                        <button class="button-3"><a href="/planttype/{{this.id}}">More Info</a></button></td>
+                    <td>
+                        <form  action="/auth/addplant" method="POST">
+                            <button id="id" type="id" name="id" value="{{this.id}}" class="button-3">&#x2606;</button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        </div>
+    </div>
+    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_table -->
+        <script>
+        function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        }
+        </script>
+  </body>
+  {{> footer}}
+</html>

@@ -1,0 +1,66 @@
+.login-center{
+    margin: auto;
+    width: 50%;
+}
+
+.login-center p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.login-center h1{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 62px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+/* For the Main Settings Form */
+.loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginform label, input, button {
+  margin-bottom: 10px;
+}
+
+.loginform label {
+  background-color: grey; 
+  border: 1px solid grey;
+  color: white; 
+  cursor: pointer; 
+  display: block; 
+  border-radius: 10px;
+  padding: 10px 24px; 
+  padding-bottom: 10px;
+}
+
+.loginform input {
+  background-color: white;
+  border: 1px solid white;
+  color: black; 
+  padding: 10px 24px; 
+  padding-bottom: 10px;
+  cursor: pointer;
+  display: block; 
+  border-radius: 10px;
+}
+
+.loginform button {
+  background-color: #008CBA;
+  border: 1px solid #008CBA;
+  color: white; 
+  padding: 10px 24px; 
+  padding-bottom: 10px;
+  cursor: pointer; 
+  display: block; 
+  border-radius: 10px;
+}
+
+/**/
+

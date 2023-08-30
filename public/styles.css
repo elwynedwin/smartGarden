@@ -1,0 +1,777 @@
+body {
+  background-color: #1d2026;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  color: #ddd;
+  height: 100vh; 
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Top navigation bar styling */
+nav {
+    background-color: #1d2026;
+    color: white;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+
+}
+
+nav li a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+nav li i {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+
+}
+
+nav li i:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* CSS for Index 3 Columns */
+.column {
+  background-color: #1d2026;
+  float: left;
+  max-height: 80vh;
+  padding-top: 8px;
+  padding-bottom: 50px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.column table {
+  width: 100%;
+}
+
+.column::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+.column::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+
+.left, .right {
+    width: 20%;
+    padding-right: 0%;
+}
+  
+.middle {
+    width: 60%;
+}
+/* Clear floats after the columns */  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 700px) {
+  .left, .right {
+    display: none;
+  }
+
+  .middle {
+    width: 100%;
+    max-width: none;
+    min-height: 80vh;
+  }
+}
+
+
+
+/* Footer Styling */
+.footer {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: #1d2026;
+    line-height: 1.3;
+    font-family: Menlo, monospace;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.footer ul {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-gap: 24px;
+    justify-items: center;
+    margin: auto;
+    list-style-type: none;
+  }
+
+
+  .footer ul a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+/* Index page overlay */
+.container {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    padding: 0%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 8px;
+}
+
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2f333b;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 8px;
+}
+  
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+
+/* My Status Overlay */
+.status-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  padding-bottom: 50px;
+}
+
+.status-item {
+  background-color: #dc0a0a;
+  border: 1px solid #dc0a0a; 
+  color: white;
+  padding: 10px 24px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  margin-left: 24px;
+  border-radius: 10px;
+  text-align: center;
+  flex-grow: 1; 
+}
+
+.status-device-item {
+  background-color: #2367dd;
+  border: 1px solid #2367dd; 
+  color: white;
+  padding: 10px 24px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-left: 24px;
+  border-radius: 10px;
+  text-align: center;
+  flex-grow: 1; 
+}
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #1d2026;
+    display: flex;
+}
+
+/* Navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/**/
+
+/* Styling Tables */
+.table-container-planttype{
+    padding: 40px; 
+    padding-bottom: 60px;
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+.data_tables{
+    width: 100%;
+    padding: 20%;
+    background-color: #1d2026;
+    text-transform: capitalize;
+}
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+  .data_tables a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+/**/
+
+
+/*  Startup Page Buttons  */
+.startup-center{
+    margin: auto;
+    width: 50%;
+}
+
+.startup-center p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.startup-center h1{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 62px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.startup-center a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+
+
+.button-5 {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+
+
+  .button-4 {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: rgb(132, 219, 0);
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+
+  @media (max-width: 1200px) {
+    .button-4 , .button-3 {
+      font-size: 12px;
+      min-height: 1.5rem;
+    }
+  }
+
+  .button-3 {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #2367dd;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    display: block;
+    margin: 0 auto;
+    min-height: 3rem;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    width: auto;
+  }
+
+  .button-3 a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+  }
+  
+  .button-5:hover,
+  .button-5:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .button-5:hover {
+    transform: translateY(-1px);
+  }
+  
+  .button-5:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+  }
+  
+
+
+  .button-delete {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa0000;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+/**/
+
+
+/* Index New Plant + New Device button div arrangement */
+.button-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+.button-container > button {
+    margin: 0 10px;
+  }
+/**/
+
+
+
+/*  AddDevice Page  */
+  .add-device-center{
+      margin: auto;
+      width: 50%;
+  }
+
+  .add-device-center p{
+      font-family: Comic Sans MS, Comic Sans, cursive;
+  }
+  
+  .add-device-center h1{
+      color: #ffffff; 
+      font-family: 'Raleway',sans-serif;
+      font-size: 62px; 
+      font-weight: 800; 
+      line-height: 72px; 
+      margin: 0 0 24px; 
+      text-align: center; 
+      text-transform: uppercase;
+  }
+  
+/**/
+
+
+/*  Plant Type Page  */
+
+    .plant-type-center{
+        margin: auto;
+        width: 50%;
+    }
+
+    .plant-type-center p{
+        font-family: Comic Sans MS, Comic Sans, cursive;
+    }
+    
+    .plant-type-center h1{
+        color: #ffffff; 
+        font-family: 'Raleway',sans-serif;
+        font-size: 62px; 
+        font-weight: 800; 
+        line-height: 72px; 
+        margin: 0 0 24px; 
+        text-align: center; 
+        text-transform: uppercase;
+    }
+
+
+/*  Index Page  */
+    .index-center {
+      margin: auto;
+      width: 70%;
+    }
+
+    .index-center p{
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    @media (max-width: 1000px) {
+      .index-center p {
+        display: none;
+      }
+    }
+    
+
+    .index-center h1 {
+      color: #ffffff;
+      font-family: 'Raleway', sans-serif;
+      font-size: 3vw;
+      font-weight: 800;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+      padding-bottom: 30px;
+    }
+
+    .index-center h2 {
+      color: #ffffff;
+      font-family: 'Raleway', sans-serif;
+      font-size: 4vw;
+      font-weight: 800;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+      padding-bottom: 30px;
+    }
+    
+
+    .index-center h3 {
+      color: #f1ce08;
+      font-family: 'Raleway', sans-serif;
+      font-size: 3vw; /* Adjust the font size as needed */
+      font-weight: 800;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+
+
+    .index-center h4 {
+      color: #ff9500;
+      font-family: 'Raleway', sans-serif;
+      font-size: 3vw; 
+      font-weight: 800;
+      line-height: 1;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+/* Font size for screens below 1250px */
+    @media (max-width: 1250px) {
+      .index-center h2 {
+        font-size: 3vw; 
+      }
+    }
+
+
+/* Index devices/plants list style */
+
+.group-item {
+  background-color: #5c5c5c; 
+  border: 1px solid #5c5c5c; 
+  color: white; 
+  padding: 10px 24px; 
+  padding-bottom: 10px;
+  cursor: pointer; 
+  display: block; 
+  margin: 10px;
+  border-radius: 10px;
+}
+  
+  .group-item:not(:last-child) {
+    border-bottom: none; 
+  }
+
+
+  .hide {
+    display: none;
+  }
+
+  .group-item:hover > .hide {
+    display: block;
+  }
+
+  /* Add a background color on hover */
+  .group-item:hover{
+    background-color: #3e8e41;
+  }
+
+  .group-item b {
+    font-size: 1vw; 
+  }
+
+
+
+  .group-item-plant {
+    background-color: #5c5c5c; 
+    border: 1px solid #5c5c5c; 
+    color: white; 
+    padding: 10px 24px; 
+    padding-bottom: 10px;
+    cursor: pointer; 
+    display: block; 
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .group-item-plant:not(:last-child) {
+    border-bottom: none; 
+  }
+
+  .group-item-plant:hover > .hide {
+    display: block;
+  }
+
+
+  .group-item-plant:hover{
+    background-color: #3e8e41;
+  }
+
+  .group-item-plant b{
+    font-size: 1vw;
+  }
+/**/
+
+
+
+
+/* About Style Section */
+
+.about-center{
+    margin: auto;
+    width: 50%;
+}
+
+.about-center p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.about-center h1{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 48px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.about-center h2{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 30px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+
+/**/
+
+
+
+/*  Moisture Page Center */
+.moisture-center{
+    margin: auto;
+    width: 70%;
+}
+
+.moisture-center p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.moisture-center h1{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 48px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.moisture-center h2{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 32px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+
+/*  Success/Failure Messages */
+
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.success {
+  background-color: #dff0d8;
+  border: 1px solid #3c763d;
+  color: #3c763d;
+}
+
+.error {
+  background-color: #f2dede;
+  border: 1px solid #a94442;
+  color: #a94442;
+}
+
+
+

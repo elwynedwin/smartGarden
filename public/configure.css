@@ -1,0 +1,53 @@
+/* Configure Page CSS */
+.configure-center{
+    margin: auto;
+    width: 70%;
+    padding-bottom: 60px;
+}
+
+.configure-center p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.configure-center h1{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 48px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.configure-center h2{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 22px; 
+    font-weight: 600; 
+    line-height: 32px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.configure-center h6{
+    color: red; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 22px; 
+    font-weight: 600; 
+    line-height: 32px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.configure-container{
+    text-align: center;
+}
+
+.configure-column{
+    display: inline-block;
+}

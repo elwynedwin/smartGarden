@@ -1,0 +1,157 @@
+ /* insertplant.hbs css to center the page */
+.insertplant-center{
+    margin: auto;
+    width: 50%;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.insertplant-center::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+.insertplant-center::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.insertplant-center p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.insertplant-center h1{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 62px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+
+ /* insertdevice.hbs css to center the page */
+.insertdevice-center{
+    margin: auto;
+    width: 50%;
+}
+
+.insertdevice-center p{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.insertdevice-center h1{
+    color: #ffffff; 
+    font-family: 'Raleway',sans-serif;
+    font-size: 62px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+
+
+
+/* Split page into two */
+.column {
+    float: left;
+    min-height: 700px;
+    border-radius: 0%;
+}
+  
+.left{
+    width: 50%;
+
+}
+  
+.right {
+    width: 50%;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}/* Clear floats after the columns */  
+
+
+
+/* Display for Forms on Settings Page */
+
+.button{
+    background-color: rgb(49, 49, 233);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+
+
+/* For the Insert Plant Form */
+
+  .insertplantform {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 60px;
+  }
+
+  .insertplantform label {
+    margin-bottom: 10px;
+  }
+  
+  .insertplantform input[type="text"],
+  input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+/* For the Insert Device Form */
+
+.insertdeviceform {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 60px;
+  }
+
+  .insertdeviceform label {
+    margin-bottom: 10px;
+  }
+  
+  .insertdeviceform input[type="text"],
+  input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+

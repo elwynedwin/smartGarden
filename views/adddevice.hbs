@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Index</title>
+  </head>
+  <body>
+    {{>navheader}}
+
+  <div class="add-device-center">
+    <h1>Add Devices to Your Smart Garden</h1>
+    <p>A smart garden device is an innovative technology that can help you take your gardening to the next level. It can monitor and control your garden remotely, providing <em><strong>real-time</strong></em> data on your garden's soil  <em><strong>moisture, temperature, and light levels.</strong></em>  With this information, you can make informed decisions on when and how much to water your plants and adjust the lighting and temperature to create the ideal growing conditions for your plants. Overall, a smart garden device can help you achieve better plant growth and make gardening easier and more enjoyable.</p>
+    <p>To get started with our smart garden technology, simply click below to browse our selection of devices. Choose the ones that best suit your needs and preferences, and you can easily control and monitor your garden from anywhere at any time. </p>
+    
+    <div>
+      <form action="/auth/adddevice" method="POST">
+        <select name="device_id" class='form-control'>
+          <option>Choose Device</option>
+          {{#each data}}
+          <option value="{{this.device_id}}">{{this.device_category}} - {{this.device_name}}</option>
+          {{/each}}
+        </select>
+
+        <button class="button-5">Add Device</button>
+      </form>
+
+    </div>
+
+  </div>
+   
+
+   <em><strong> </strong></em>
+
+  </body>
+
+
+</html>
