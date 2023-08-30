@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use("/", require("./routes/pages"));
 app.use("/auth", require("./routes/auth"));
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("Server has started on 4000");
 });
 
